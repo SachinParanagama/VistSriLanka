@@ -1,0 +1,31 @@
+{
+  "name": "visitsrilanka",
+  "version": "1.0.0",
+  "description": "Web base tourisum  system",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon BACKEND/server.js",
+    "check:format": "prettier --check .",
+    "format:fix": "prettier --write ."
+  },
+  "author": "Pahasar",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.1.1",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "joi": "^17.6.3",
+    "joi-password-complexity": "^5.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.3.0",
+    "sweetalert2": "^11.4.32"
+  }
+}
