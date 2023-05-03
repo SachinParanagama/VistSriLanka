@@ -40,4 +40,7 @@ router.route("/").get((req, res) => {
         });
 });
 
+//customer login
+//http://localhost:5000/customer/login
+
 module.exports = router;
