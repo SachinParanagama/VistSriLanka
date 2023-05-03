@@ -19,6 +19,13 @@ const customerSchema = new Schema({
         type: String,
         required: true,
     },
+    permission: {
+        type: String,
+        required: true,
+        enum: ["customer", "admin"],
+        default: "customer",
+        
+    },
 }); 
 
 const Customer = mongoose.model("Customer", customerSchema);

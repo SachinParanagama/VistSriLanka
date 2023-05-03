@@ -25,4 +25,16 @@ router.route("/").post((req, res) => {
         });
 });
 
+//view feedbacks
+//http://localhost:5000/TPFeedback/
+router.route("/").get((req, res) => {
+    TPFeedback.find()
+        .then((feedbacks) => {
+        res.json(feedbacks);
+        })
+        .catch((err) => {
+        console.log(err);
+        });
+});
+
 module.exports = router;
