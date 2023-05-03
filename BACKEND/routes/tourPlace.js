@@ -115,6 +115,21 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-
+//delete tour place
+//http://localhost:5000/tourplace/:id
+router.route("/:id").delete(async (req, res) => {
+    const tourplaceId = req.params.id;
+  
+    await tourPlace.findByIdAndRemove(tourplaceId)
+      .exec()
+      .then(() => {
+        res.status(200).send({ status: "Tour place  deleted" });
+      })
+      .catch((err) => {
+        res
+          .status(500)
+          .send({ status: "Error with deleting tour place", error: err.message });
+      });
+  });
 
 module.exports = router;
