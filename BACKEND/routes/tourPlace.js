@@ -61,4 +61,15 @@ router .post('/', upload, async(req,res)=>{
     })
 })
 
+//view tour places
+//http://localhost:5000/tourPlace/
+
+router.route("/").get((req,res)=>{
+    tourPlace.find().then((tourPlaces)=>{
+        res.json(tourPlaces)
+    }).catch((err)=>{
+        console.log(err)
+    })
+})
+
 module.exports = router;
