@@ -28,4 +28,16 @@ router.route("/").post((req, res) => {
         });
 });
 
+//view customers
+//http://localhost:5000/customer/
+router.route("/").get((req, res) => {
+    Customer.find()
+        .then((customers) => {
+        res.json(customers);
+        })
+        .catch((err) => {
+        console.log(err);
+        });
+});
+
 module.exports = router;
