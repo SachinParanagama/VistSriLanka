@@ -32,8 +32,9 @@ app.use('/uploads', express.static('BACKEND/uploads'));
 
 // Event Routes
 app.use('/event',eventRouter);
-app.use('/tourguide',tourguideRouter);
 
+// TourGuide Routes
+app.use('/tourguide',tourguideRouter);
 
 //TourPlace Routes
 app.use('/tourPlace',tourPlaceRouter);
