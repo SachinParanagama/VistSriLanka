@@ -9,6 +9,7 @@ const connectDB = require("./config/db");
 
 
 const eventRouter = require("./routes/events.js");
+const tourguideRouter = require("./routes/tourGuide.js");
 
 
 
@@ -27,6 +28,7 @@ app.use('/uploads', express.static('BACKEND/uploads'));
 
 
 app.use('/event',eventRouter);
+app.use('/tourguide',tourguideRouter);
 
 
 

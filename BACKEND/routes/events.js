@@ -23,7 +23,7 @@ const upload = multer({
 }).single('image')
 
 
-router.post('/add', upload, async(req,res)=>{
+router.post('/add-event', upload, async(req,res)=>{
 
     const newEvent = new Event({
 
@@ -73,7 +73,7 @@ router.post('/add', upload, async(req,res)=>{
 
 
 
-router.route("/view").get((req,res)=>{
+router.route("/view-event").get((req,res)=>{
     Event.find().then((events)=>{
         res.json(events)
     }).catch((err)=>{
