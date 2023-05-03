@@ -6,10 +6,10 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 
 const eventRouter = require("./routes/events.js");
-
 const tourPlaceRouter = require("./routes/tourPlace.js");
-
 const tourguideRouter = require("./routes/tourGuide.js");
+const customerRouter = require("./routes/customer.js");
+
 
 const app = express();
 dotenv.config();
@@ -30,6 +30,9 @@ app.use("/tourguide", tourguideRouter);
 
 //TourPlace Routes
 app.use("/tourPlace", tourPlaceRouter);
+
+//Customer Routes
+app.use("/customer", customerRouter);
 
 const PORT = process.env.PORT || 5000;
 
