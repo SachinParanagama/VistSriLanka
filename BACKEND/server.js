@@ -9,6 +9,7 @@ const eventRouter = require("./routes/events.js");
 const tourPlaceRouter = require("./routes/tourPlace.js");
 const tourguideRouter = require("./routes/tourGuide.js");
 const customerRouter = require("./routes/customer.js");
+const TPFeedbackRouter = require("./routes/TPFeedback.js");
 
 
 const app = express();
@@ -33,6 +34,9 @@ app.use("/tourPlace", tourPlaceRouter);
 
 //Customer Routes
 app.use("/customer", customerRouter);
+
+//TPFeedback Routes
+app.use("/TPFeedback", TPFeedbackRouter);
 
 const PORT = process.env.PORT || 5000;
 

@@ -23,4 +23,5 @@ const feedbackSchema = new Schema(
 
 );
 
-module.exports = mongoose.model("Feedback", feedbackSchema);
+const TPFeedback = mongoose.model("TPFeedback", feedbackSchema);
+module.exports = {TPFeedback};
