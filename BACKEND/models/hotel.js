@@ -3,6 +3,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const hotelSchema = new Schema({
+  hId:{
+    type: String,
+    required: true,
+    unique: true
+  },
   hotelName: {
     type: String,
     required: true,
