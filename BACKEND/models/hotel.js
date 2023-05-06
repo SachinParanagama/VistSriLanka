@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
 
 const hotelSchema = new Schema({
@@ -27,10 +26,9 @@ const hotelSchema = new Schema({
   image: {
     type: String,
     required: true,
-    unique: true,
   },
 });
 
-const Event = mongoose.model("Event", hotelSchema);
+const hotel = mongoose.model("hotel", hotelSchema);
 
-module.exports = Event;
+module.exports = hotel;
