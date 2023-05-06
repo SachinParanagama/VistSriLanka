@@ -21,6 +21,6 @@ const hotelRatingSchema = new Schema({
   },
 });
 
-const Event = mongoose.model("Event", hotelRatingSchema);
+const Rating = mongoose.model("Rating", hotelRatingSchema);
 
-module.exports = Event;
+module.exports = Rating;
