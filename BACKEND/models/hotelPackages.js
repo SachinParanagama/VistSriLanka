@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const hotelSchema = new Schema({
-  hid: {
+const hotelPackageSchema = new Schema({
+  hotel: {
     type: String,
     required: true,
   },
@@ -26,6 +26,6 @@ const hotelSchema = new Schema({
   },
 });
 
-const Event = mongoose.model("Event", hotelSchema);
+const Event = mongoose.model("Event", hotelPackageSchema);
 
 module.exports = Event;
