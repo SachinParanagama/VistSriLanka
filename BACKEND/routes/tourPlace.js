@@ -72,24 +72,64 @@ router.route("/").get((req, res) => {
 //view tour place by id
 //http://localhost:5000/tourPlace/:id
 router.route("/:id").get(async (req, res) => {
-    let tourPlaceId = req.params.id;
+  let tourPlaceId = req.params.id;
+
+  const TourPlace = await tourPlace
+    .findById(tourPlaceId)
+    .then((tourPlace) => {
+      res.status(200).json({
+        success: true,
+        tourPlace,
+      });
+    })
+    .catch((err) => {
+      console.log(err.meesage);
+      res
+        .status(500)
+        .send({ status: "Error with get item", error: err.meesage });
+    });
+});
+
+// update tour place
+// http://localhost:5000/tourplace/:id
+router.put("/:id", async (req, res) => {
+  let tourplaceId = req.params.id;
+  const { placeName, location, description } = req.body;
+  const update = {
+    placeName,
+    location,
+    description,
+  };
+  try {
+    const updatedTourplace = await tourPlace.findByIdAndUpdate(
+      tourplaceId,
+      update,
+    );
+    res.status(200).send({ status: "Tour place details updated" });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({
+      status: "Error with updating tour place details",
+      error: err.message,
+    });
+  }
+});
+
+//delete tour place
+//http://localhost:5000/tourplace/:id
+router.route("/:id").delete(async (req, res) => {
+    const tourplaceId = req.params.id;
   
-    const TourPlace = await tourPlace.findById(tourPlaceId)
-      .then((tourPlace) => {
-        res.status(200).json({
-          success: true,
-          tourPlace,
-        });
+    await tourPlace.findByIdAndRemove(tourplaceId)
+      .exec()
+      .then(() => {
+        res.status(200).send({ status: "Tour place  deleted" });
       })
       .catch((err) => {
-        console.log(err.meesage);
         res
           .status(500)
-          .send({ status: "Error with get item", error: err.meesage });
-      });
-  });
-  
-
-  
+          .send({ status: "Error with deleting tour place", error: err.message });
+    });
+});
 
 module.exports = router;

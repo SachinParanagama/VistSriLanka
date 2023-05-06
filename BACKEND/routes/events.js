@@ -8,7 +8,7 @@ let Event = require("../models/event");
 //image upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "backend/uploads");
+    cb(null, "../BACKEND/uploads");
   },
 
   filename: (req, file, cb) => {
@@ -23,12 +23,12 @@ const upload = multer({
 router.post("/add-event", upload, async (req, res) => {
   const newEvent = new Event({
     eventID: req.body,
-    eventName: req.body.productName,
-    location: req.body.category,
+    eventName: req.body.eventName,
+    location: req.body.location,
     date: req.body.date,
     price: req.body.price,
-    image: req.file.filename,
     unit: req.body.unit,
+    image: req.file.filename,
   });
 
   const totalNumberOfProductInDb = await Event.countDocuments();
@@ -51,11 +51,11 @@ router.post("/add-event", upload, async (req, res) => {
     .save()
     .then(() => {
       alert("Event added successfully");
-      res.redirect("http://localhost:3000/view");
+      res.redirect("http://localhost:3000/view-event");
     })
     .catch((err) => {
       alert("Event details already exists");
-      res.redirect("http://localhost:3000/add");
+      res.redirect("http://localhost:3000/add-event");
       console.log(err);
     });
 });
