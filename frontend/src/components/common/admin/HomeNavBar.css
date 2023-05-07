@@ -11,7 +11,7 @@
 }
 
 .homenavbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background: #4481eb;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@
   }
   
   .homenav-links:hover {
-    background-color: #10B48E;
+    background-color: #4481eb;
     border-radius: 4px;
     transition: all 0.2s ease-out;
     color: #fff;

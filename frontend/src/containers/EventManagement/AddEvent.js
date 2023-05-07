@@ -58,6 +58,21 @@ export default function AddEvent() {
 
                     <br />
 
+                    
+                    <div className="col-md-7 element">
+                        <label className="form-label1" for="categorySelect">Price Category</label>
+                        <select name="priceCategory" className="form-select" id="priceCategorySelect"
+                        >
+                            <option>Choose...</option>
+                            <option>Standing pre-sale</option>
+                            <option>Standing normal</option>
+                            <option>VIP seated pre-sale</option>
+                            <option>VIP seated normal</option>
+                        </select>
+                    </div>
+                    
+                    <br/>
+
                     <div className="col-md-5 element">
                         <label for="inputQuant" className="form-label1">Price(LKR.)</label>
                         <input name="price" type="number" className="form-control" id="inputQuant" placeholder="Enter unit price"
@@ -67,12 +82,14 @@ export default function AddEvent() {
                     <br />
 
                     <div className="col-md-7 element">
-                        <label className="form-label1" for="categorySelect">Unit</label>
+                        <label className="form-label1" for="categorySelect">Event Category</label>
                         <select name="unit" className="form-select" id="unitSelect"
                         >
                             <option>Choose...</option>
-                            <option>early bird</option>
-                            <option>general</option>
+                            <option>Conference</option>
+                            <option>Workshop</option>
+                            <option>In door concerts</option>
+                            <option>Out door concerts</option>
                         </select>
                     </div>
 
