@@ -29,9 +29,6 @@
 	border-radius: 25px;
 	background-color: rgba(8, 8, 8, 0.7);
 	box-shadow: 0 0 8px rgb(245, 242, 242);
-
-
-
 }
 
 .containerss h5 {
@@ -44,7 +41,7 @@
 
 .containerss label {
 	font-weight: 350;
-	color: white
+	color: rgb(0, 0, 0)
 }
 
 .containerss input {
