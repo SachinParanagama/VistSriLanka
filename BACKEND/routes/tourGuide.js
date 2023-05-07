@@ -8,7 +8,7 @@ let TourGuide = require("../models/tourGuide");
 //image upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "backend/uploads");
+    cb(null, "../BACKEND/uploads");
   },
 
   filename: (req, file, cb) => {
@@ -54,11 +54,11 @@ router.post("/add-tourGuide", upload, async (req, res) => {
     .save()
     .then(() => {
       alert("TourGuide added successfully");
-      res.redirect("http://localhost:3000/view");
+      res.redirect("http://localhost:3000/view-tourGuide");
     })
     .catch((err) => {
       alert("TourGuide details already exists");
-      res.redirect("http://localhost:3000/add");
+      res.redirect("http://localhost:3000/add-tourGuide");
       console.log(err);
     });
 });
@@ -123,7 +123,7 @@ router.route("/delete/:id").delete(async (req, res) => {
 
 //search event based on the event date
 
-router.post("/search-event", async (req, res) => {
+router.post("/search-tourGuide", async (req, res) => {
   try {
     TourGuide.find({
       date: {
