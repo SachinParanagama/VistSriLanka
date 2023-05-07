@@ -55,8 +55,5 @@ export default function AddHotel() {
                 </form>
             </div>
         </div>
-
-
-
     )
 }

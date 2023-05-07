@@ -3,9 +3,9 @@ import {Link} from "react-router-dom";
 import {FaHome} from "react-icons/fa";
 import './AddHotelNavBar.css';
 
-function AddHoteltNavbar() {
+function ViewEventNavbar() {
     return(
-        <nav className="navbar navbar-expand-lg navbar-light nav responsive">
+        <nav className="navbar navbar-expand-lg navbar-light nav">
 
             <div className="container-fluid">
     
@@ -18,9 +18,10 @@ function AddHoteltNavbar() {
                 <div className="collapse navbar-collapse"></div>
 
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav Navbtn">                        
-                        {/* <Link to="/add-hotel" className="btn nav-link anime color active" style={{color:"white"}} aria-current="page">Add Hotel</Link> */}
-                        <Link to="/view-hotel" className="btn nav-link anime color" style={{color:"white"}}>Available Hotels</Link>
+                    <div className="navbar-nav Navbtn">
+
+                        <Link to="/add-hotel" type="radio" className="btn nav-link anime color" style={{color:"white"}} aria-current="page">Add Hotel</Link>
+                        {/* <Link to="/view-hotel" type="radio" className="btn nav-link anime color active" style={{color:"white"}}>All hotels</Link> */}
                     </div>
                 </div>
             </div>
@@ -29,4 +30,4 @@ function AddHoteltNavbar() {
     )
 }
 
-export default AddHoteltNavbar;
+export default ViewEventNavbar;

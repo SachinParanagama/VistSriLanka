@@ -55,13 +55,13 @@ router.route("/").get((req, res) => {
 });
 
 //get package by hotel
-//http://localhost:5000/package/hotel
+//http://localhost:5000/package/:hotel
 router.route("/:hotel").get(async (req, res) => {  
   let hotel = req.params.hotel;
 
   await Package.findById(hotel)
     .then((Package) => {
-      res.status(200).send({ status: "User fetched", package });
+      res.status(200).send({ status: "User fetched", Package });
     })
     .catch((err) => {
       console.log(err.message);
