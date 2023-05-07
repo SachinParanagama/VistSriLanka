@@ -11,7 +11,6 @@ const ViewHotelTable = ({hotel , handleEditClick, handleDeleteClick}) => {
                 <td className='td'>{hotel.location}</td>
                 <td className='td'>{hotel.contact}</td>
                 <td className='td'>{hotel.description}</td>
-                <td className='td'>{hotel.image}</td>
 
                 <td>
                     <button type="button" onClick={(e) => handleEditClick(e,hotel)}className="btn btn-outline-success">Edit</button>
