@@ -53,5 +53,17 @@ router.post("/newHotel", upload, async (req, res) => {
       });
   });
 
+//view all hotels
+//http://localhost:5000/hotel/
+router.route("/").get((req, res) => {
+  Hotel
+    .find()
+    .then((Hotel) => {
+      res.json(Hotel);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
   module.exports = router;
