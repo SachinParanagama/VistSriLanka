@@ -20,7 +20,7 @@ function AdminCards() {
                     src="images/Guide.gif"
                     text="Manage Guide Details"
                     label="Tour Guide Management"
-                    path="/"
+                    path="/view-tourGuide"
                 />
 
                 

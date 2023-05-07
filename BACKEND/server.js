@@ -12,6 +12,8 @@ const customerRouter = require("./routes/customer.js");
 const TPFeedbackRouter = require("./routes/TPFeedback.js");
 const TGFeedbackRouter = require("./routes/TGFeedback.js");
 const HotelRouter = require("./routes/hotelRoute.js");
+const HotelPackageRouter = require("./routes/packageRoute.js");
+const HotelRatingRouter = require("./routes/hotelRating.js");
 
 
 const app = express();
@@ -45,6 +47,12 @@ app.use("/TGFeedback", TGFeedbackRouter);
 
 //hotel Routes
 app.use("/hotel", HotelRouter);
+
+//hotel package Routes
+app.use("/package", HotelPackageRouter);
+
+//hotel Routes
+app.use("/rating", HotelRatingRouter);
 
 const PORT = process.env.PORT || 5000;
 

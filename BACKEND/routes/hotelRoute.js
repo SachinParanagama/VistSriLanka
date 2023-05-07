@@ -8,7 +8,7 @@ let Hotel = require("../models/hotel");
 //image upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "../BACKEND/uploads");
+    cb(null, "../BACKEND/uploads/hotel");
   },
 
   filename: (req, file, cb) => {
@@ -53,5 +53,17 @@ router.post("/newHotel", upload, async (req, res) => {
       });
   });
 
+//view all hotels
+//http://localhost:5000/hotel/
+router.route("/").get((req, res) => {
+  Hotel
+    .find()
+    .then((Hotel) => {
+      res.json(Hotel);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
   module.exports = router;

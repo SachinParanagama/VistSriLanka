@@ -8,10 +8,18 @@ import AdminHome from './components/common/admin/AdminHome';
 /*Event management routes */
 import AddEvent from './containers/EventManagement/AddEvent';
 import ViewEvent from './containers/EventManagement/ViewEvent';
+import AddTourGuide from './containers/TourGuideManagement/AddTourGuide';
+import ViewTourGuide from './containers/TourGuideManagement/ViewTourGuide';
 
 /*Tourplace management routes */
 import AddTourplace from './containers/TourplaceManagement/AddTourplace';
 import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
+
+
+
+/*Hotel management routes */
+import AddHotel from './containers/HotelManagement/AddHotel';
+import AddPackage from './containers/HotelManagement/AddPackages';
 
 
  const App = () =>{
@@ -29,10 +37,16 @@ import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
             {/*Event management */}
             <Route path="/add-event" element={<AddEvent/>} />
             <Route path="/view-event" element={<ViewEvent/>} />
+            <Route path="/add-tourGuide" element={<AddTourGuide/>} />
+            <Route path="/view-tourGuide" element={<ViewTourGuide/>} />
 
             {/*Tourplace management */}
             <Route path="/add-tourPlace" element={<AddTourplace/>} />
             <Route path="/view-tourPlace" element={<ViewTourplace/>} />
+
+            {/*Hotel Management */}
+            <Route path="/add-hotel" element={<AddHotel/>} />
+            <Route path="/add-package" element={<AddPackage/>} />
 
          </Routes>
       
