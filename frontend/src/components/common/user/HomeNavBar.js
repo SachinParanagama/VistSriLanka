@@ -20,7 +20,8 @@ import {
 function HomeNavBar() {
 
   return(
-    <Navbar bg="dark" expand="lg" variant="dark">
+    <div className='nav-container'>
+    <Navbar>
   
 
     <div id='hdLogo'> 
@@ -65,6 +66,7 @@ function HomeNavBar() {
       </Navbar.Collapse>
     
   </Navbar>
+  </div>
 );
 }
 

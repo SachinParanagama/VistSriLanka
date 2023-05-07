@@ -21,6 +21,8 @@ import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
 import AddHotel from './containers/HotelManagement/AddHotel';
 import AddPackage from './containers/HotelManagement/AddPackages';
 import EventCategory from './containers/EventManagement/EventCategory';
+import ContactUs from './components/common/ContactUs';
+import AddComplaint from './components/common/AddComplaint';
 
 
  const App = () =>{
@@ -35,6 +37,10 @@ import EventCategory from './containers/EventManagement/EventCategory';
            
            <Route path="/customer-home" element={<Home/>} />
            <Route path="/admin-home" element={<AdminHome/>} />
+
+           <Route path="/contact" element={<ContactUs/>} />
+           <Route path="/add-feedback" element={<AddComplaint/>} />
+
 
             {/*Event management */}
             <Route path="/add-event" element={<AddEvent/>} />

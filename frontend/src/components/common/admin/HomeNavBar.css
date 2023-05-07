@@ -10,8 +10,12 @@
   
 }
 
-.homenavbar {
-    background: #4481eb;
+.nav-container{
+  background-color: #4481eb;
+}
+
+.nav-container.homenavbar {
+    background-color: #e3dddd;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -60,7 +64,7 @@
   }
   
   .homenav-links:hover {
-    background-color: #4481eb;
+    background-color: #10B48E;
     border-radius: 4px;
     transition: all 0.2s ease-out;
     color: #fff;
