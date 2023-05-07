@@ -20,11 +20,12 @@ function AdminNavBar () {
   
 
     return(
-        <Navbar bg="dark" expand="lg" variant="dark">
+      <div className='nav-container'>
+        <Navbar>
       
 
         <div id='hdLogo'> 
-                <img alt="Logo"  src={require("../../images/VisitSriLanka.png")} width="100"  height="70" className="d-inline-block align-top" /> 
+                <img alt="Logo"  src={require("../../images/logo.png")} width="100"  height="70" className="d-inline-block align-top" /> 
             </div>
             
           <Navbar.Brand>
@@ -65,6 +66,7 @@ function AdminNavBar () {
           </Navbar.Collapse>
         
       </Navbar>
+      </div>
     );
 }
 

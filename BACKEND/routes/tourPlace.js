@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const multer = require("multer");
 const path = require("path");
+const alert = require("alert");
 const Mongoose = require("mongoose");
 let tourPlace = require("../models/tourPlace");
 
@@ -9,6 +10,7 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "../BACKEND/uploads");
   },
+
   filename: (req, file, cb) => {
     cb(null, Date.now() + file.originalname);
   },
@@ -20,7 +22,7 @@ const upload = multer({
 
 //add tour place
 //http://localhost:5000/tourPlace/
-router.post("/", upload, async (req, res) => {
+router.post("/add-tourPlace", upload, async (req, res) => {
   const newTourPlace = new tourPlace({
     tourID: req.body,
     placeName: req.body.placeName,
@@ -48,17 +50,19 @@ router.post("/", upload, async (req, res) => {
   newTourPlace
     .save()
     .then(() => {
-      res.json("Tour place added successfully");
+      alert("Tour place added successfully");
+      res.redirect("http://localhost:3000/view-tourPlace");
     })
     .catch((err) => {
+      alert("Tour Plce details already exists");
+      res.redirect("http://localhost:3000/add-tourPlace");
       console.log(err);
-      return res.status(500).send("Server error");
     });
 });
 
 //view tour places
 //http://localhost:5000/tourPlace/
-router.route("/").get((req, res) => {
+router.route("/view-tourPlace").get((req, res) => {
   tourPlace
     .find()
     .then((tourPlaces) => {

@@ -29,6 +29,7 @@ router.post("/add-event", upload, async (req, res) => {
     price: req.body.price,
     priceCategory: req.body.priceCategory,
     unit: req.body.unit,
+    description: req.body.description,
     image: req.file.filename,
   });
 
