@@ -13,10 +13,6 @@ const feedbackSchema = new Schema(
             ref: "tourPlace",
             required: true,
         },
-        userName: {
-            type: String,
-            required: true,
-        },
         feedback: {
             type: String,
             required: true,
