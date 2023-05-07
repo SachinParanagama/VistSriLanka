@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-
+import Home from './components/common/user/Home';
 import AdminHome from './components/common/admin/AdminHome';
 
 /*Event management routes */
@@ -20,6 +20,7 @@ import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
 /*Hotel management routes */
 import AddHotel from './containers/HotelManagement/AddHotel';
 import AddPackage from './containers/HotelManagement/AddPackages';
+import EventCategory from './containers/EventManagement/EventCategory';
 
 
  const App = () =>{
@@ -31,7 +32,8 @@ import AddPackage from './containers/HotelManagement/AddPackages';
      
        <main>
          <Routes>
-          
+           
+           <Route path="/customer-home" element={<Home/>} />
            <Route path="/admin-home" element={<AdminHome/>} />
 
             {/*Event management */}
@@ -39,6 +41,7 @@ import AddPackage from './containers/HotelManagement/AddPackages';
             <Route path="/view-event" element={<ViewEvent/>} />
             <Route path="/add-tourGuide" element={<AddTourGuide/>} />
             <Route path="/view-tourGuide" element={<ViewTourGuide/>} />
+            <Route path="/event" element={<EventCategory/>} />
 
             {/*Tourplace management */}
             <Route path="/add-tourPlace" element={<AddTourplace/>} />
