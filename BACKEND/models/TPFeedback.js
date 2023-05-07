@@ -8,6 +8,11 @@ const feedbackSchema = new Schema(
             ref: "Customer",
             required: true,
         },
+        tourPlace: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "tourPlace",
+            required: true,
+        },
         userName: {
             type: String,
             required: true,
