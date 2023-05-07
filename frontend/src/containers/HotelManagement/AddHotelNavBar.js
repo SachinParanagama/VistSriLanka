@@ -5,7 +5,7 @@ import './AddHotelNavBar.css';
 
 function AddEventNavbar() {
     return(
-        <nav className="navbar navbar-expand-lg navbar-light nav">
+        <nav className="navbar navbar-expand-lg navbar-light nav responsive">
 
             <div className="container-fluid">
     
