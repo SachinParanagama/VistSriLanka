@@ -5,12 +5,12 @@ const { TPFeedback } = require("../models/TPFeedback");
 //http://localhost:5000/TPFeedback/
 router.route("/").post((req, res) => {
     const postedBy = req.body.postedBy;
-    const userName =  req.body.userName;
+    const tourPlace = req.body.tourPlace;
     const feedback = req.body.feedback;
 
     const newTPFeedback = new TPFeedback({
         postedBy,
-        userName,
+        tourPlace,
         feedback,
     });
     
