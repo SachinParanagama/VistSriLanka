@@ -13,10 +13,14 @@ import ViewTourGuide from './containers/TourGuideManagement/ViewTourGuide';
 
 /*Tourplace management routes */
 import AddTourplace from './containers/TourplaceManagement/AddTourplace';
+import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
+
+
 
 /*Hotel management routes */
 import AddHotel from './containers/HotelManagement/AddHotel';
 import AddPackage from './containers/HotelManagement/AddPackages';
+
 
  const App = () =>{
 
@@ -38,6 +42,7 @@ import AddPackage from './containers/HotelManagement/AddPackages';
 
             {/*Tourplace management */}
             <Route path="/add-tourPlace" element={<AddTourplace/>} />
+            <Route path="/view-tourPlace" element={<ViewTourplace/>} />
 
             {/*Hotel Management */}
             <Route path="/add-hotel" element={<AddHotel/>} />

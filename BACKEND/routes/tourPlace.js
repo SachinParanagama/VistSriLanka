@@ -22,7 +22,7 @@ const upload = multer({
 //http://localhost:5000/tourPlace/
 router.post("/", upload, async (req, res) => {
   const newTourPlace = new tourPlace({
-    ID: req.body.ID,
+    tourID: req.body,
     placeName: req.body.placeName,
     location: req.body.location,
     description: req.body.description,
@@ -43,7 +43,7 @@ router.post("/", upload, async (req, res) => {
     }
   }
 
-  newTourPlace.ID = `TPID${numberToString}`;
+  newTourPlace.tourID = `TPID${numberToString}`;
 
   newTourPlace
     .save()
@@ -91,9 +91,9 @@ router.route("/:id").get(async (req, res) => {
 });
 
 // update tour place
-// http://localhost:5000/tourplace/:id
+// http://localhost:5000/tourPlace/:id
 router.put("/:id", async (req, res) => {
-  let tourplaceId = req.params.id;
+  let tourID = req.body.ID;
   const { placeName, location, description } = req.body;
   const update = {
     placeName,
@@ -102,7 +102,7 @@ router.put("/:id", async (req, res) => {
   };
   try {
     const updatedTourplace = await tourPlace.findByIdAndUpdate(
-      tourplaceId,
+      tourID,
       update,
     );
     res.status(200).send({ status: "Tour place details updated" });
@@ -118,9 +118,9 @@ router.put("/:id", async (req, res) => {
 //delete tour place
 //http://localhost:5000/tourplace/:id
 router.route("/:id").delete(async (req, res) => {
-    const tourplaceId = req.params.id;
+    const id = req.params.id;
   
-    await tourPlace.findByIdAndRemove(tourplaceId)
+    await tourPlace.findByIdAndRemove(id)
       .exec()
       .then(() => {
         res.status(200).send({ status: "Tour place  deleted" });
