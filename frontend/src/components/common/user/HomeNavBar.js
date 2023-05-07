@@ -25,7 +25,7 @@ function HomeNavBar() {
   
 
     <div id='hdLogo'> 
-            <img alt="Logo"  src={require("../../images/VisitSriLanka.png")} width="100"  height="70" className="d-inline-block align-top" /> 
+            <img alt="Logo"  src={require("../../images/logo.png")} width="100"  height="70" className="d-inline-block align-top" /> 
         </div>
         
       <Navbar.Brand>

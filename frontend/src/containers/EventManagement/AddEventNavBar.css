@@ -20,12 +20,12 @@
   }
   
   .active {
-    background-color:black;
+    background-color:#0f2341;
 	box-shadow: 3px 3px 8px #10B48E, -3px -3px 8px #10B48E;
   }
   
   .anime:hover {
-    background-color:black;
+    background-color:#0f2341;
   }
 
   .form{
@@ -36,7 +36,7 @@
   }
   
   .form-label{
-    color:black;
+    color:#0f2341;
     font-weight: bold;
   }
   

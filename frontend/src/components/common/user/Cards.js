@@ -5,19 +5,19 @@ import './Cards.css'
 function Cards() {
   return (
     <div className='cards'>
-      <h1>-------Featured Products-------</h1>
+      <h1>-------Featured Services From Us-------</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
             <ul className='cards__items'>
                 <CardItem
                     src="images/home-event.gif"
-                    text="Feed Your Soul With Pizza "
+                    text="Feed Your Soul With Fun and Enjoyment "
                     label="Events"
                     path="/event"
                 />
                 <CardItem
                     src="images/home-guide.gif"
-                    text="You like burgers? Then you’ll love ours"
+                    text="Discover the hidden gems with a local guide"
                     label="Tour Guides"
                     path="/burgers"
                 />
@@ -25,13 +25,13 @@ function Cards() {
             <ul className='cards__items'>
                 <CardItem
                     src="images/home-place.gif"
-                    text="There’s something in our shawarma that makes everyone want more"
+                    text="Explore the magic of Sri Lanka"
                     label="Tour Places"
                     path="/shawarma"
                 />
                 <CardItem
                     src="images/home-hotel.gif"
-                    text="Hot and fresh, just the way you like it"
+                    text="A world of comfort at your doorstep"
                     label="Hotels"
                     path="/hotdogs"
                 />
