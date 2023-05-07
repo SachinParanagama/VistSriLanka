@@ -26,6 +26,6 @@ const hotelPackageSchema = new Schema({
   },
 });
 
-const Event = mongoose.model("Event", hotelPackageSchema);
+const hotelPackage = mongoose.model("hotelPackage", hotelPackageSchema);
 
-module.exports = Event;
+module.exports = hotelPackage;
