@@ -22,7 +22,7 @@ const upload = multer({
 
 
 //add new hotel
-//http://localhost:5000/hotel/newPackage
+//http://localhost:5000/package/newPackage
 router.post("/newPackage", upload, async (req, res) => {
     const newPackage = new Package({
         hotel: req.body.hotel,
