@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 const tourPlaceSchema = new Schema({
   ID: {
     type: String,
-    required: true,
-    unique: true,
+  },
+  tourID: {
+    type: String,
   },
   placeName: {
     type: String,
