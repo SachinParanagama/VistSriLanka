@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const hotelRatingSchema = new Schema({
   hotel: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Hotel",
     required: true,
   },
   user: {
