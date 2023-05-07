@@ -146,7 +146,7 @@ export default function ViewHotel(){
 
             <div ref={componentRef}>
             <form onSubmit={updateData}>
-                <table className='table '>
+                <table className='table responsive'>
                     <thead>
                         <tr>
                             <th>Hotel ID</th>
@@ -154,7 +154,6 @@ export default function ViewHotel(){
                             <th>Loacation</th>
                             <th>Contact No.</th>
                             <th>Description</th>
-                            <th>Image</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
