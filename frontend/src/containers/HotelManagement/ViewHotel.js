@@ -69,7 +69,7 @@ export default function ViewHotel(){
             description: editFormData.description            
         }
 
-        axios.put("http://localhost:5000/event/update/:ID",updateHotel).then(() =>{
+        axios.put("http://localhost:5000/hotel/update/:ID",updateHotel).then(() =>{
             swal.fire({
                 title: "Success!",
                 text: "Updated Successfully",
@@ -113,7 +113,7 @@ export default function ViewHotel(){
     
     const handleDeleteClick = (id) => {
         
-        axios.delete('http://localhost:5000/event/delete/'+id).then(() =>{
+        axios.delete('http://localhost:5000/hotel/delete/'+id).then(() =>{
             swal.fire({
                 title: "Success!",
                 text: "Deleted Successfully",
@@ -129,7 +129,7 @@ export default function ViewHotel(){
             });
         });
         setTimeout(() => {
-            window.location.replace("http://localhost:3000/view-event");
+            window.location.replace("http://localhost:3000/view-hotel");
             }, 3000)
     }
 
