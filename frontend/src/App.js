@@ -20,6 +20,7 @@ import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
 /*Hotel management routes */
 import AddHotel from './containers/HotelManagement/AddHotel';
 import AddPackage from './containers/HotelManagement/AddPackages';
+import ViewHotel from'./containers/HotelManagement/ViewHotel';
 
 
  const App = () =>{
@@ -47,6 +48,7 @@ import AddPackage from './containers/HotelManagement/AddPackages';
             {/*Hotel Management */}
             <Route path="/add-hotel" element={<AddHotel/>} />
             <Route path="/add-package" element={<AddPackage/>} />
+            <Route path="/view-hotel" element={<ViewHotel/>} />
 
          </Routes>
       
