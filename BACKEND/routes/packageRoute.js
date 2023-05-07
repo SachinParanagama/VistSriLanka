@@ -41,5 +41,34 @@ router.post("/newPackage", upload, async (req, res) => {
       });
   });
 
+//view all packages
+//http://localhost:5000/package/
+router.route("/").get((req, res) => {
+  Package
+    .find()
+    .then((Package) => {
+      res.json(Package);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+//get package by hotel
+//http://localhost:5000/package/hotel
+router.route("/:hotel").get(async (req, res) => {  
+  let hotel = req.params.hotel;
+
+  await Package.findById(hotel)
+    .then((cart) => {
+      res.status(200).send({ status: "User fetched", package });
+    })
+    .catch((err) => {
+      console.log(err.message);
+      res
+        .status(500)
+        .send({ status: "Error with get user", error: err.message });
+    });
+});
 
   module.exports = router;
