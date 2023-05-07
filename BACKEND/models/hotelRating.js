@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
 
-const hotelRatingSchema = new Schema({
+const hotelRatingSchema = new Schema(
+  {
   hotel: {
     type: String,
     required: true,
@@ -12,15 +12,18 @@ const hotelRatingSchema = new Schema({
     required: true,
   },
   rating: {
-    type: int,
+    type: String,
     required: true,
   },
   feedback: {
     type: String,
     required: true,
   },
-});
+},
+{
+  timestamps: true,
+}
+);
 
 const Rating = mongoose.model("Rating", hotelRatingSchema);
-
-module.exports = Rating;
+module.exports = {Rating};
