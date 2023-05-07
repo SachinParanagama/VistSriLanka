@@ -23,9 +23,6 @@ import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
 /*Hotel management routes */
 import AddHotel from './containers/HotelManagement/AddHotel';
 import AddPackage from './containers/HotelManagement/AddPackages';
-import EventCategory from './containers/EventManagement/EventCategory';
-import ContactUs from './components/common/ContactUs';
-import AddComplaint from './components/common/AddComplaint';
 
 
  const App = () =>{
