@@ -4,12 +4,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from './components/common/user/Home';
 import AdminHome from './components/common/admin/AdminHome';
+import ContactUs from './components/common/ContactUs';
+import AddComplaint from './components/common/AddComplaint';
 
 /*Event management routes */
 import AddEvent from './containers/EventManagement/AddEvent';
 import ViewEvent from './containers/EventManagement/ViewEvent';
 import AddTourGuide from './containers/TourGuideManagement/AddTourGuide';
 import ViewTourGuide from './containers/TourGuideManagement/ViewTourGuide';
+import EventCategory from './containers/EventManagement/EventCategory';
 
 /*Tourplace management routes */
 import AddTourplace from './containers/TourplaceManagement/AddTourplace';
