@@ -29,7 +29,7 @@ export default function ViewTourplace(){
     useEffect(() =>{
 
         function gettourplaces() {
-            axios.get("http://localhost:5000/tourPlace/").then((res) => {
+            axios.get("http://localhost:5000/tourPlace/view-tourPlace").then((res) => {
 
                 settourplaces(res.data);
                 console.log(res.data)

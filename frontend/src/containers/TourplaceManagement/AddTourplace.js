@@ -27,7 +27,7 @@ export default function AddTourplace() {
             <br></br>
 
             <div className="containerss">
-                <form action="http://localhost:5000/tourPlace/" method="post" class="form img " encType="multipart/form-data">
+                <form action="http://localhost:5000/tourPlace/add-tourPlace" method="post" class="form img " encType="multipart/form-data">
 
                     <h5>Add Tourplace</h5>
                     <br />

@@ -51,6 +51,7 @@ export default function ViewEvent(){
         priceCategory: "",
         price: "",
         unit: "",
+        description:"",
     })
 
 
@@ -77,6 +78,7 @@ export default function ViewEvent(){
             priceCategory: editFormData.priceCategory,
             price: editFormData.price,
             unit: editFormData.unit,
+            description: editFormData.description,
             
         }
 
@@ -116,6 +118,7 @@ export default function ViewEvent(){
             priceCategory: event.priceCategory,
             price: event.price,
             unit: event.unit,
+            description: event.description,
         }
 
         setEditFormData(formValues);
@@ -175,6 +178,7 @@ export default function ViewEvent(){
                             <th>Price Category</th>
                             <th>Price</th>
                             <th>Event Category</th>
+                            <th>Description</th>
                             <th>Actions</th>
                         </tr>
                     </thead>

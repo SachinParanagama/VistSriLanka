@@ -94,6 +94,13 @@ export default function AddEvent() {
                     </div>
 
                     <br />
+                    <div className="col-md-7 element">
+                        <label for="insertdescription" className="form-label1">Description</label>
+                        <textarea type="text" name="description" className="form-control input-field" id="insertdescription" placeholder="Enter description" required
+                        />
+                    </div>
+
+                    <br/>
 
                     <div className="element">
                         <label for="actual-btn" className="form-label1">Upload Event Image</label>
