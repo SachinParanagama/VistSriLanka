@@ -11,8 +11,7 @@ import ViewEvent from './containers/EventManagement/ViewEvent';
 
 /*Tourplace management routes */
 import AddTourplace from './containers/TourplaceManagement/AddTourplace';
-
-
+import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
 
 
  const App = () =>{
@@ -33,6 +32,7 @@ import AddTourplace from './containers/TourplaceManagement/AddTourplace';
 
             {/*Tourplace management */}
             <Route path="/add-tourPlace" element={<AddTourplace/>} />
+            <Route path="/view-tourPlace" element={<ViewTourplace/>} />
 
          </Routes>
       
