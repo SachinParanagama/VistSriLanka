@@ -4,7 +4,7 @@ import {FaFacebook} from 'react-icons/fa';
 import {FaInstagram} from 'react-icons/fa';
 import {FaYoutube} from 'react-icons/fa';
 import {FaTwitter} from 'react-icons/fa';
-import './AdminFooter.css';
+import './Footer.css';
 
 function AdminFooter() {
   return (
@@ -29,6 +29,8 @@ function AdminFooter() {
           </div>
           
 
+                <Link to = '/add-feedback'><button  className="feedback_btn"> Give Us Feedbacks </button></Link>
+
           <div class='footer-link-items'>
             <h2>Contact</h2>
             <Link to='/'>Support</Link>
@@ -38,7 +40,7 @@ function AdminFooter() {
         </div>
         
       </div>
-    
+      
       <section class='social-media'>
         <div class='social-media-wrap'>
 
@@ -51,7 +53,7 @@ function AdminFooter() {
             Visit SriLanka
             </Link>
           </div>
-          <small class='website-rights'> Cafe SecretAlly © 2022</small>
+          <small class='website-rights'> Visit SriLanka © 2022</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
