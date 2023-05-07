@@ -10,6 +10,7 @@ const ViewEventTable = ({event , handleEditClick, handleDeleteClick}) => {
                 <td className='td'>{event.eventName}</td>
                 <td className='td'>{event.location}</td>
                 <td className='td'>{event.date.substring(0,10)}</td>
+                <td className='td'>{event.priceCategory}</td>
                 <td className='td'>LKR.{event.price}.00</td>
                 <td className='td'>{event.unit}</td>
 

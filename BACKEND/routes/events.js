@@ -27,6 +27,7 @@ router.post("/add-event", upload, async (req, res) => {
     location: req.body.location,
     date: req.body.date,
     price: req.body.price,
+    priceCategory: req.body.priceCategory,
     unit: req.body.unit,
     image: req.file.filename,
   });
@@ -75,12 +76,14 @@ router.route("/update/:ID").put(async (req, res) => {
   const { eventName } = req.body;
   const { location } = req.body;
   const { price } = req.body;
+  const {priceCategory} = req.body;
   const { unit } = req.body;
 
   const Update = {
     eventName,
     location,
     price,
+    priceCategory,
     unit,
   };
 
