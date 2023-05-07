@@ -66,4 +66,50 @@ router.route("/").get((req, res) => {
     });
 });
 
+//delete hotel data
+//http://localhost:5000/hotel/delete/:id
+router.route("/delete/:id").delete(async (req, res) => {
+  const id = req.params.id;
+
+  await Hotel.findByIdAndRemove(id)
+    .exec()
+    .then(() => {
+      res.status(200).send({ status: "Hotel  deleted" });
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .send({ status: "Error with deleting", error: err.message });
+    });
+});
+
+//Update hotel data
+//http://localhost:5000/hotel/update/:id
+router.route("/update/:id").put(async (req, res) => {
+  let id = req.body.id;
+  const { hotelName } = req.body;
+  const { location } = req.body;
+  const { contact } = req.body;
+  const { description } = req.body;
+
+  const Update = {
+    hotelName,
+    location,
+    contact,
+    description,
+  };
+
+  const update = await Hotel.findByIdAndUpdate(id, Update)
+    .then(() => {
+      res.status(200).send({ status: "Hotel detials updated" });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send({
+        status: "Error with updating details",
+        error: err.message,
+      });
+    });
+});
+
   module.exports = router;

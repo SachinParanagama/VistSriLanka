@@ -41,5 +41,51 @@ router.post("/newPackage", upload, async (req, res) => {
       });
   });
 
+//view all packages
+//http://localhost:5000/package/
+router.route("/").get((req, res) => {
+  Package
+    .find()
+    .then((Package) => {
+      res.json(Package);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+//get package by hotel
+//http://localhost:5000/package/:hotel
+router.route("/:hotel").get(async (req, res) => {  
+  let hotel = req.params.hotel;
+
+  await Package.findById(hotel)
+    .then((Package) => {
+      res.status(200).send({ status: "User fetched", Package });
+    })
+    .catch((err) => {
+      console.log(err.message);
+      res
+        .status(500)
+        .send({ status: "Error with get user", error: err.message });
+    });
+});
+
+//delete package data
+//http://localhost:5000/hotel/delete/:id
+router.route("/delete/:id").delete(async (req, res) => {
+  const id = req.params.id;
+
+  await Package.findByIdAndRemove(id)
+    .exec()
+    .then(() => {
+      res.status(200).send({ status: "Package  deleted" });
+    })
+    .catch((err) => {
+      res
+        .status(500)
+        .send({ status: "Error with deleting", error: err.message });
+    });
+});
 
   module.exports = router;

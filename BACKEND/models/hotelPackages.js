@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 
 const hotelPackageSchema = new Schema({
   hotel: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "hotel",
     required: true,
   },
   packageName: {
