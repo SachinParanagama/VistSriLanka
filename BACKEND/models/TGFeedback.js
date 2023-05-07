@@ -7,8 +7,9 @@ const TGuidefeedbackSchema = new Schema({
         ref: "Customer",
         required: true,
     },
-    userName: {
-        type: String,
+    tourGuide: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "TourGuide",
         required: true,
     },
     feedback: {

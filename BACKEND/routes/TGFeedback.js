@@ -5,12 +5,12 @@ const { TGFeedback } = require("../models/TGFeedback");
 //http://localhost:5000/TGFeedback/
 router.route("/").post((req, res) => {
     const postedBy = req.body.postedBy;
-    const userName =  req.body.userName;
+    const tourGuide = req.body.tourGuide;
     const feedback = req.body.feedback;
 
     const newTGFeedback = new TGFeedback({
         postedBy,
-        userName,
+        tourGuide,
         feedback,
     });
     
