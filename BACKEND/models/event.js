@@ -12,7 +12,6 @@ const eventSchema = new Schema({
   eventName: {
     type: String,
     required: true,
-    unique: true,
   },
   location: {
     type: String,
@@ -26,7 +25,15 @@ const eventSchema = new Schema({
     type: Number,
     required: true,
   },
+  priceCategory: {
+    type: String,
+    required: true,
+  },
   unit: {
+    type: String,
+    required: true,
+  },
+  description: {
     type: String,
     required: true,
   },

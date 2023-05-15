@@ -32,7 +32,7 @@ function AdminCards() {
                     src="images/place.gif"
                     text="Manage Tour Place"
                     label="Tour Place Management"
-                    path="/userManagement"
+                    path="/view-tourPlace"
                 />
 
                
@@ -41,7 +41,7 @@ function AdminCards() {
                     src="images/hotel.gif"
                     text="Manage Hotel Details"
                     label="Hotel Management"
-                    path="/view_Payment"
+                    path="/add-hotel"
                 />
 
               

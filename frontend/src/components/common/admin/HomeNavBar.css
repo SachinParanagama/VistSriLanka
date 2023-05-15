@@ -10,8 +10,12 @@
   
 }
 
-.homenavbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+.nav-container{
+  background-color: #0f2341;
+}
+
+.nav-container.homenavbar {
+    background-color: #e3dddd;
     height: 80px;
     display: flex;
     justify-content: center;

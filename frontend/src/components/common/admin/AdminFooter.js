@@ -11,10 +11,10 @@ function AdminFooter() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-            Join with us to receive our best products
+            Together, we're stronger
         </p>
         <p className='footer-subscription-text'>
-        Best Food Delivery Shop in Sri Lanka
+          We're better when we're together
         </p>
         
       </section>
@@ -38,13 +38,13 @@ function AdminFooter() {
         </div>
         
       </div>
-      
+    
       <section class='social-media'>
         <div class='social-media-wrap'>
-{/* 
+
         <div id='hdLogo'> 
-                <img alt="Logo"  src={require("../images/Cafe.png")} width="110"  height="100" className="d-inline-block align-top" /> 
-            </div> */}
+                <img alt="Logo"  src={require("../../images/logo.png")} width="100"  height="100" className="d-inline-block align-top" /> 
+            </div>
             
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>

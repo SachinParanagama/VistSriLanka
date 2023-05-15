@@ -48,8 +48,10 @@ export default function ViewEvent(){
         eventName: "",
         location: "",
         date: "",
+        priceCategory: "",
         price: "",
         unit: "",
+        description:"",
     })
 
 
@@ -73,8 +75,10 @@ export default function ViewEvent(){
             ID: editEvent,
             eventName: editFormData.eventName,
             location: editFormData.location,
+            priceCategory: editFormData.priceCategory,
             price: editFormData.price,
-            unit: editFormData.unit
+            unit: editFormData.unit,
+            description: editFormData.description,
             
         }
 
@@ -111,8 +115,10 @@ export default function ViewEvent(){
             eventID: event.eventID,
             eventName: event.eventName,
             date: event.date,
+            priceCategory: event.priceCategory,
             price: event.price,
             unit: event.unit,
+            description: event.description,
         }
 
         setEditFormData(formValues);
@@ -169,8 +175,10 @@ export default function ViewEvent(){
                             <th>Event Name</th>
                             <th>Loacation</th>
                             <th>Date</th>
+                            <th>Price Category</th>
                             <th>Price</th>
-                            <th>Unit</th>
+                            <th>Event Category</th>
+                            <th>Description</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
