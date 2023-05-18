@@ -101,7 +101,7 @@ export default function ViewHotel(){
             hotelName: hotel.hotelName,
             location: hotel.location,
             contact: hotel.contact,
-            description: hotel.description,
+            description: hotel.description
         }
 
         setEditFormData(formValues);
