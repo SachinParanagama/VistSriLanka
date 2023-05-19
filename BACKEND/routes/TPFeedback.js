@@ -37,4 +37,12 @@ router.route("/").get((req, res) => {
         });
 });
 
+//view by id
+//http://localhost:5000/TPFeedback/:id
+router.route("/:id").get(async (req, res) => {
+    
+});
+
+
+
 module.exports = router;
