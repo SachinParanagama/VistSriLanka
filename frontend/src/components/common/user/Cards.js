@@ -19,7 +19,7 @@ function Cards() {
                     src="images/home-guide.gif"
                     text="Discover the hidden gems with a local guide"
                     label="Tour Guides"
-                    path="/burgers"
+                    path="/tourguide"
                 />
             </ul>
             <ul className='cards__items'>

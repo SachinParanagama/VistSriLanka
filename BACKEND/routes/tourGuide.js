@@ -23,6 +23,7 @@ const upload = multer({
 router.post("/add-tourGuide", upload, async (req, res) => {
   const newTourGuide = new TourGuide({
     tourGuideID: req.body,
+    category: req.body.category,
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     ContactNumber: req.body.ContactNumber,
