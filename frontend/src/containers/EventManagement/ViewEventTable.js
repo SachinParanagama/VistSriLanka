@@ -7,7 +7,6 @@ const ViewEventTable = ({event , handleEditClick, handleDeleteClick}) => {
         <>
             <tr>
                 <td className='td'>{event.eventID}</td>
-                <td className='td'>{event.category}</td>
                 <td className='td'>{event.eventName}</td>
                 <td className='td'>{event.location}</td>
                 <td className='td'>{event.date.substring(0,10)}</td>

@@ -24,8 +24,8 @@ const ViewTourPlaceCategory = ({tourPlace,userInfo}) => {
                         <Card.Img className='image center' src={"http://localhost:5000/uploads/" + tourPlace.image}></Card.Img>
 
                         <Card.Body>
-                            <Card.Title>{tourPlace.placeName}</Card.Title>
-                            <Card.Title>{tourPlace.location}</Card.Title>
+                            <Card.Title><center>{tourPlace.placeName}</center></Card.Title>
+                            <Card.Title><center>{tourPlace.location}</center></Card.Title>
                             {/* <Card.Title>{product.quantity} in stock</Card.Title> */}
                             <div className='btnCenter'>
                             <button 
@@ -35,7 +35,7 @@ const ViewTourPlaceCategory = ({tourPlace,userInfo}) => {
                                 // onClick={handleAddToCart}
                                 
                                 >
-                                    Add to Cart
+                                    Add a Booking
                             </button>
                             </div>
                         </Card.Body>
