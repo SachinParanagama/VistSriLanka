@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 // import { addToCart } from '../redux/actions/cartActions';
 
 
-const ViewEventCategory = ({event,userInfo}) => {
+const ViewHotelCategory = ({event,userInfo}) => {
     const cat = event.category;
 
     const dispatch = useDispatch();
@@ -48,4 +48,4 @@ const ViewEventCategory = ({event,userInfo}) => {
     )
 }
 
-export default ViewEventCategory;
+export default ViewHotelCategory;
