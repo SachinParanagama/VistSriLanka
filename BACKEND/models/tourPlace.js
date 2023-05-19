@@ -8,6 +8,10 @@ const tourPlaceSchema = new Schema({
   tourID: {
     type: String,
   },
+  category : {
+    type : String,
+    required : true
+  },
   placeName: {
     type: String,
     required: true,

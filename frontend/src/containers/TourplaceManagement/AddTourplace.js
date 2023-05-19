@@ -33,6 +33,15 @@ export default function AddTourplace() {
                     <br />
 
                     <br />
+                    <div className="col-md-10">
+                        <label className="form-label1" for="categorySelect">Category</label>
+                        <select name="category" className="form-select" id="categorySelect"
+                        >
+                            <option>Tour Place</option>
+                        </select>
+                    </div>
+
+                    <br/>
 
                     <div className="col-md-7 element">
                         <label for="placeName" className="form-label1">TourPlace Name</label>

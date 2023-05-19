@@ -19,6 +19,7 @@ import ViewTourGuide from './containers/TourGuideManagement/ViewTourGuide';
 /*Tourplace management routes */
 import AddTourplace from './containers/TourplaceManagement/AddTourplace';
 import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
+import TourPlace from './containers/TourplaceManagement/TourPlace';
 
 
 
@@ -58,6 +59,7 @@ import ViewHotel from'./containers/HotelManagement/ViewHotel';
             {/*Tourplace management */}
             <Route path="/add-tourPlace" element={<AddTourplace/>} />
             <Route path="/view-tourPlace" element={<ViewTourplace/>} />
+            <Route path="/tourPlace" element={<TourPlace/>} />
 
             {/*Hotel Management */}
             <Route path="/add-hotel" element={<AddHotel/>} />
