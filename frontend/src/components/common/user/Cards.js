@@ -27,7 +27,7 @@ function Cards() {
                     src="images/home-place.gif"
                     text="Explore the magic of Sri Lanka"
                     label="Tour Places"
-                    path="/shawarma"
+                    path="/tourPlace"
                 />
                 <CardItem
                     src="images/home-hotel.gif"
