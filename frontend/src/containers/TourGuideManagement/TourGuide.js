@@ -6,7 +6,7 @@ import ViewTourGuideCategory from './ViewTourGuideCategory';
 
 export default function TourGuide() {
 
-    const [tourguide,setEvents] = useState([]);
+    const [tourguides,setTourguides] = useState([]);
 
    
     useEffect(() =>{
@@ -14,7 +14,7 @@ export default function TourGuide() {
         function getTourGuides() {
             axios.get("http://localhost:5000/tourguide/view-tourGuide").then((res) => {
 
-                setEvents(res.data);
+                setTourguides(res.data);
             }).catch((err) => {
 
                 alert(err.message);
@@ -31,7 +31,7 @@ export default function TourGuide() {
 
            <Container className='justify-content-center p-2'>
            <Row>
-              {tourguide.map((tourguide)=> {
+              {tourguides.map((tourguide)=> {
                   return(
                     <ViewTourGuideCategory tourguide={tourguide} />
                   )
