@@ -5,9 +5,8 @@ import EditEvent from './EditEvent';
 import ViewEventTable from './ViewEventTable';
 import '../../App.css';
 import './AddEventNavBar.css'
-import {FiPrinter} from 'react-icons/fi';
 import { useReactToPrint } from "react-to-print";
-import '../../components/common/admin/HomeNavBar.css'
+import '../../components/common/admin/HomeNavBar.css';
 import AdminNavBar from "../../components/common/admin/AdminNavBar";
 import swal from "sweetalert2";
 
@@ -45,6 +44,7 @@ export default function ViewEvent(){
 
     const [editFormData, setEditFormData] = useState({
         eventID: "",
+        category: "",
         eventName: "",
         location: "",
         date: "",
@@ -73,6 +73,7 @@ export default function ViewEvent(){
         
         const updateEvent ={
             ID: editEvent,
+            category: editFormData.category,
             eventName: editFormData.eventName,
             location: editFormData.location,
             priceCategory: editFormData.priceCategory,
@@ -113,6 +114,7 @@ export default function ViewEvent(){
 
         const formValues = {
             eventID: event.eventID,
+            category: event.category,
             eventName: event.eventName,
             date: event.date,
             priceCategory: event.priceCategory,
@@ -172,6 +174,7 @@ export default function ViewEvent(){
                     <thead>
                         <tr>
                             <th>Event ID</th>
+                            <th>Category</th>
                             <th>Event Name</th>
                             <th>Loacation</th>
                             <th>Date</th>

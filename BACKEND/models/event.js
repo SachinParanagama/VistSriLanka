@@ -9,6 +9,10 @@ const eventSchema = new Schema({
   eventID: {
     type: String,
   },
+  category : {
+    type : String,
+    required : true
+  },
   eventName: {
     type: String,
     required: true,

@@ -1,18 +1,14 @@
-import React, {useState,useEffect,Fragment} from 'react';
+import React, {useState,useEffect} from 'react';
 import axios from 'axios';
-import ViewEventCategory from './ViewEventCategory';
-import HomeNavBar from './common/user/HomeNavBar';
+import HomeNavBar from '../../components/common/user/HomeNavBar';
 import {Row,Container} from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import ViewEventCategory from './ViewEventCategory';
 
-
-export default function EventCategory() {
+export default function Event() {
 
     const [events,setEvents] = useState([]);
 
-    const userLogin = useSelector((state) => state.userLogin);
-    const { userInfo } = userLogin;
-
+   
     useEffect(() =>{
 
         function getEvents() {
@@ -32,16 +28,17 @@ export default function EventCategory() {
     return (
         <>
             <HomeNavBar/>
-           
+
            <Container className='justify-content-center p-2'>
            <Row>
               {events.map((event)=> {
                   return(
-                    <ViewEventCategory event={event} userInfo={userInfo}/>
+                    <ViewEventCategory event={event} />
                   )
               })}
            </Row>
-            </Container> 
+           </Container>
+            
                 
             
         </>
