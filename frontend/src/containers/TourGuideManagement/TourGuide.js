@@ -6,7 +6,7 @@ import ViewTourGuideCategory from './ViewTourGuideCategory';
 
 export default function TourGuide() {
 
-    const [events,setEvents] = useState([]);
+    const [tourguide,setEvents] = useState([]);
 
    
     useEffect(() =>{
@@ -31,7 +31,7 @@ export default function TourGuide() {
 
            <Container className='justify-content-center p-2'>
            <Row>
-              {events.map((tourguide)=> {
+              {tourguide.map((tourguide)=> {
                   return(
                     <ViewTourGuideCategory tourguide={tourguide} />
                   )
