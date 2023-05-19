@@ -32,7 +32,14 @@ export default function AddTourGuide() {
                     <h5>Add TourGuide</h5>
                     <br />
 
-                    <br />
+                    <div className="col-md-10">
+                        <label className="form-label1" for="categorySelect">Category</label>
+                        <select name="category" className="form-select" id="categorySelect"
+                        >
+                            <option>Tour Guide</option>
+                        </select>
+                    </div>
+                    <br/>
 
                     <div className="col-md-2 element">
                         <label for="insertfirstName" className="form-label1">First Name</label>

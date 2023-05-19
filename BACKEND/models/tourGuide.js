@@ -9,6 +9,10 @@ const tourGuideSchema = new Schema({
   tourGuideID: {
     type: String,
   },
+  category : {
+    type : String,
+    required : true
+  },
   firstName: {
     type: String,
     required: true,
