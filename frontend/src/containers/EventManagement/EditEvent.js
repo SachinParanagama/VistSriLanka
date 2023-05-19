@@ -7,6 +7,9 @@ const EditProduct = ({editFormData, handleEditFormChange, handleCancelClick}) =>
                 
             </td>
             <td>
+
+            </td>
+            <td>
                 <input type="text" required="required" placeholder='Enter event name...' name="eventName" value={editFormData.eventName} onChange={handleEditFormChange}/>
             </td>
             <td>
@@ -36,6 +39,9 @@ const EditProduct = ({editFormData, handleEditFormChange, handleCancelClick}) =>
                             <option>In door concerts</option>
                             <option>Out door concerts</option>
                 </select>
+            </td>
+            <td>
+                <input type="text" required="required" placeholder='Description...' name="description" className="form-control input-field" value={editFormData.description} onChange={handleEditFormChange}/>
             </td>
             <td>
                 <button type="submit" className="btn btn-outline-success">Save</button>

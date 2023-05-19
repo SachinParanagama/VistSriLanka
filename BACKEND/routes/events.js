@@ -23,6 +23,7 @@ const upload = multer({
 router.post("/add-event", upload, async (req, res) => {
   const newEvent = new Event({
     eventID: req.body,
+    category: req.body.category,
     eventName: req.body.eventName,
     location: req.body.location,
     date: req.body.date,

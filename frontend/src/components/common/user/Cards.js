@@ -12,8 +12,8 @@ function Cards() {
                 <CardItem
                     src="images/home-event.gif"
                     text="Feed Your Soul With Fun and Enjoyment "
-                    label="Events"
-                    path="/event"
+                    label="Event"
+                    path="/events"
                 />
                 <CardItem
                     src="images/home-guide.gif"

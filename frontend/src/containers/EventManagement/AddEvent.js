@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import AddEventNavBar from './AddEventNavBar';
-import '../../App.css'
-import './AddEventNavBar.css'
-import './AddEdit.css'
-import '../../components/common/admin/HomeNavBar.css'
+import '../../App.css';
+import './AddEventNavBar.css';
+import './AddEdit.css';
+import '../../components/common/admin/HomeNavBar.css';
 import AdminNavBar from "../../components/common/admin/AdminNavBar";
 
 
@@ -33,6 +33,14 @@ export default function AddEvent() {
                     <br />
 
                     <br />
+                    <div className="col-md-10">
+                        <label className="form-label1" for="categorySelect">Category</label>
+                        <select name="category" className="form-select" id="categorySelect"
+                        >
+                            <option>Event</option>
+                        </select>
+                    </div>
+                    <br/>
 
                     <div className="col-md-7 element">
                         <label for="inserEvent" className="form-label1">Event Name</label>
