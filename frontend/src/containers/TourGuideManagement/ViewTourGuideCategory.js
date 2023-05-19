@@ -17,7 +17,7 @@ const ViewTourGuideCategory = ({tourguide,userInfo}) => {
 
     return(
         <>
-            {cat === "TourGuide" &&
+            {cat === "Tour Guide" &&
                 <Col md={6} lg={4} sm={12}>
                     <Card className="shadow-lg m-4 rounded card" >
 
