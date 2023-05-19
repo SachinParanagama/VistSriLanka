@@ -10,8 +10,11 @@ import AddComplaint from './components/common/AddComplaint';
 /*Event management routes */
 import AddEvent from './containers/EventManagement/AddEvent';
 import ViewEvent from './containers/EventManagement/ViewEvent';
+
+/*Event management routes */
 import AddTourGuide from './containers/TourGuideManagement/AddTourGuide';
 import ViewTourGuide from './containers/TourGuideManagement/ViewTourGuide';
+
 import EventCategory from './containers/EventManagement/EventCategory';
 
 /*Tourplace management routes */
