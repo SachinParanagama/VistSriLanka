@@ -8,7 +8,7 @@ let tourPlace = require("../models/tourPlace");
 //image upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "../BACKEND/uploads");
+    cb(null, "../frontend/public/uploads/");
   },
 
   filename: (req, file, cb) => {

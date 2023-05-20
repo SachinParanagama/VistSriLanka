@@ -56,6 +56,11 @@ function HomeNavBar() {
                      Contact Us
                   </Link>
             </Nav.Link>
+            <Nav.Link>
+            <Link to='/admin-home' className='homenav-links'>
+                     Admin
+                  </Link>
+            </Nav.Link>
 
             
           </Nav>
