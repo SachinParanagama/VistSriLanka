@@ -25,8 +25,6 @@ import ViewTourplace from './containers/TourplaceManagement/ViewTourplace';
 import TourPlace from './containers/TourplaceManagement/TourPlace';
 import TourPlaceFeedback from './containers/TourplaceManagement/TourPlaceFeedback';
 
-
-
 /*Hotel management routes */
 import AddHotel from './containers/HotelManagement/AddHotel';
 import AddPackage from './containers/HotelManagement/AddPackages';
