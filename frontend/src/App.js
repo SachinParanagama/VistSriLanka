@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from './components/common/user/Home';
+
+import UserHome from './components/common/user/Home';
 import AdminHome from './components/common/admin/AdminHome';
 import ContactUs from './components/common/ContactUs';
 import AddComplaint from './components/common/AddComplaint';
@@ -40,7 +41,8 @@ import TourGuide from './containers/TourGuideManagement/TourGuide';
        <main>
          <Routes>
            
-           <Route path="/customer-home" element={<Home/>} />
+
+           <Route path="/" element={<UserHome/>} />
            <Route path="/admin-home" element={<AdminHome/>} />
 
            <Route path="/contact" element={<ContactUs/>} />

@@ -5,7 +5,7 @@ import './Cards.css'
 function Cards() {
   return (
     <div className='cards'>
-      <h1>-------Featured Services From Us-------</h1>
+      <h1 className='title' style={{backgroundColor: "#F1F6F9", padding: "2%" }} >Plan Your Tour With Us</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
             <ul className='cards__items'>

@@ -46,7 +46,7 @@ function HomeNavBar() {
           <Nav>
             {" "}
             <Nav.Link>
-            <Link to='/customer-home' className='homenav-links'>
+            <Link to='/' className='homenav-links'>
                      Home
                   </Link>
             </Nav.Link>
