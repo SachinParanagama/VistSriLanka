@@ -52,8 +52,14 @@ function AdminNavBar () {
                 </Nav.Link>
 
                 <Nav.Link>
-                <Link to='/customer-home' className='homenav-links'>
-                         Customer Home
+                <Link to='/admin-home' className='homenav-links'>
+                         Dashboard
+                      </Link>
+                </Nav.Link>
+
+                <Nav.Link>
+                <Link to='/' className='homenav-links'>
+                         Home
                       </Link>
                 </Nav.Link>
   
