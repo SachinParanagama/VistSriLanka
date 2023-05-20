@@ -58,7 +58,7 @@ function HomeNavBar() {
             </Nav.Link>
             <Nav.Link>
             <Link to='/admin-home' className='homenav-links'>
-                     Admin
+                     About Us
                   </Link>
             </Nav.Link>
 
