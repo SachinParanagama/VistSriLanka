@@ -35,7 +35,7 @@ const ViewTourPlaceCategory = ({tourPlace,userInfo}) => {
                                 // onClick={handleAddToCart}
                                 
                                 >
-                                    Add a Booking
+                                    View Place
                             </button>
                             </div>
                         </Card.Body>
