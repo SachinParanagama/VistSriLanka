@@ -7,6 +7,10 @@ const hotelSchema = new Schema({
     required: true,
     unique: true
   },
+  category : {
+    type : String,
+    required : true
+  },
   hotelName: {
     type: String,
     required: true,

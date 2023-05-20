@@ -26,6 +26,7 @@ const upload = multer({
 router.post("/newHotel", upload, async (req, res) => {
     const newHotel = new Hotel({
         hId: req.body.hId,
+        category: req.body.category,
         hotelName: req.body.hotelName,
         location: req.body.location,
         contact: req.body.contact,

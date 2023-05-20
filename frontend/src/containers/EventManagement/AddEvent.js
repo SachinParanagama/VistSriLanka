@@ -35,8 +35,7 @@ export default function AddEvent() {
                     <br />
                     <div className="col-md-10">
                         <label className="form-label1" for="categorySelect">Category</label>
-                        <select name="category" className="form-select" id="categorySelect"
-                        >
+                        <select name="category" className="form-select" id="categorySelect">
                             <option>Event</option>
                         </select>
                     </div>
