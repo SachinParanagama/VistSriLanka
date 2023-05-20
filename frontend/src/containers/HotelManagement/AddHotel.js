@@ -23,6 +23,13 @@ export default function AddHotel() {
                     <h5>Add Accomodation</h5>
                     <br />
 
+                    <div className="col-md-10">
+                        <label className="form-label1" for="categorySelect">Category</label>
+                        <select name="category" className="form-select" id="categorySelect">
+                            <option>Hotel</option>
+                        </select>
+                    </div>
+
                     <div className="col-md-7 element">
                         <label for="hotelName" className="form-label1">Hotel Name</label>
                         <input type="text" name="hotelName" className="form-control input-field" id="hotelName" required/>
