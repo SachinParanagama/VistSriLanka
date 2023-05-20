@@ -9,10 +9,13 @@ const ViewTourGuideCategory = ({tourguide,userInfo}) => {
 
     const dispatch = useDispatch();
 
-    // const handleAddToCart = () => {
-    //     dispatch(addToCart(tourguide,userInfo));
-    //     window.location.reload();
-    // };
+    const handleAddToBooking = () => {
+        //dispatch(addToCart(tourguide,userInfo));
+        window.location.reload();
+    };
+
+    // Concatenate firstName and lastName
+  const fullName = `${tourguide.firstName} ${tourguide.lastName}`;
  
 
     return(
@@ -24,17 +27,18 @@ const ViewTourGuideCategory = ({tourguide,userInfo}) => {
                         <Card.Img className='image center' src={"http://localhost:5000/uploads/" + tourguide.image}></Card.Img>
 
                         <Card.Body>
-                            <Card.Title>{tourguide.firstName}</Card.Title>
-                            <Card.Title>{tourguide.lastName}</Card.Title>
+                            {/* <Card.Title>{tourguide.firstName}</Card.Title>
+                            <Card.Title>{tourguide.lastName}</Card.Title> */}
+                            <Card.Title>{fullName}</Card.Title>
                             <Card.Title>{tourguide.languages}</Card.Title>
                             <Card.Title>Price: Rs.{tourguide.charges}.00</Card.Title>
                             {/* <Card.Title>{product.quantity} in stock</Card.Title> */}
+                            <br></br>
                             <div className='btnCenter'>
                             <button 
                                 type='button' 
                                 className='btn btn-warning btn-sm'
-                                // disabled={product.quantity <= 0}
-                                // onClick={handleAddToCart}
+                                onClick={handleAddToBooking}
                                 
                                 >
                                     Add a Booking
