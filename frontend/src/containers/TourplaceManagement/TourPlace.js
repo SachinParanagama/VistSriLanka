@@ -31,11 +31,11 @@ export default function TourPlace() {
 
            <Container className='justify-content-center p-2'>
            <Row>
-              {tourPlaces.map((tourPlace)=> {
-                  return(
-                    <ViewTourPlaceCategory tourPlace={tourPlace} />
-                  )
-              })}
+             
+         
+                    <ViewTourPlaceCategory  />
+           
+          
            </Row>
            </Container>
             

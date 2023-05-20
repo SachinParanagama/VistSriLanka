@@ -1,31 +1,39 @@
 import React from 'react';
 import {Card, Col} from 'react-bootstrap';
 import {useDispatch} from 'react-redux';
+import { useState, useEffect } from "react";
+import axios from "axios";
 // import { addToCart } from '../redux/actions/cartActions';
 
 
-const ViewTourPlaceCategory = ({tourPlace,userInfo}) => {
-    const cat = tourPlace.category;
+const ViewTourPlaceCategory = () => {
+    // const cat = tourPlace.category;
 
-    const dispatch = useDispatch();
+    const [allPlaces, setallPlaces] = useState([]);
 
-    // const handleAddToCart = () => {
-    //     dispatch(addToCart(event,userInfo));
-    //     window.location.reload();
-    // };
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/tourPlace/view-tourPlace")
+      .then((res) => setallPlaces(res.data))
+      .catch((error) => console.log(error));
+  });
  
 
     return(
         <>
-            {cat === "Tour Place" &&
+            {allPlaces.filter((elem)=> elem.category == "tourPlace").map((elem)=> (
                 <Col md={6} lg={4} sm={12}>
+                
+                    <div>
+             
                     <Card className="shadow-lg m-4 rounded card" >
+                 
 
-                        <Card.Img className='image center' src={"http://localhost:5000/uploads/" + tourPlace.image}></Card.Img>
+                        <Card.Img className='image center' src={`/uploads/${elem.image}`}></Card.Img>
 
                         <Card.Body>
-                            <Card.Title><center>{tourPlace.placeName}</center></Card.Title>
-                            <Card.Title><center>{tourPlace.location}</center></Card.Title>
+                            <Card.Title><center>{elem.placeName}</center></Card.Title>
+                            <Card.Title><center>{elem.location}</center></Card.Title>
                             {/* <Card.Title>{product.quantity} in stock</Card.Title> */}
                             <div className='btnCenter'>
                             <button 
@@ -39,11 +47,15 @@ const ViewTourPlaceCategory = ({tourPlace,userInfo}) => {
                             </button>
                             </div>
                         </Card.Body>
+                  
 
                     </Card>
+                    </div>
+                 
                 </Col>
-            }
-                
+                   ))}
+         
+        
         </>                        
     )
 }
