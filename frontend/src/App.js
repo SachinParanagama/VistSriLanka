@@ -18,6 +18,7 @@ import BookEvent from './containers/EventManagement/BookEvent';
 import AddTourGuide from './containers/TourGuideManagement/AddTourGuide';
 import ViewTourGuide from './containers/TourGuideManagement/ViewTourGuide';
 import BookTourGuide from './containers/TourGuideManagement/BookTourGuide';
+import TourGuide from './containers/TourGuideManagement/TourGuide';
 
 /*Tourplace management routes */
 import AddTourplace from './containers/TourplaceManagement/AddTourplace';
@@ -29,9 +30,8 @@ import TourPlaceFeedback from './containers/TourplaceManagement/TourPlaceFeedbac
 import AddHotel from './containers/HotelManagement/AddHotel';
 import AddPackage from './containers/HotelManagement/AddPackages';
 import ViewHotel from'./containers/HotelManagement/ViewHotel';
-import TourGuide from './containers/TourGuideManagement/TourGuide';
 import BookHotel from './containers/HotelManagement/BookHotel';
-
+import ViewHotelCategory from './containers/HotelManagement/ViewHotelCategory';
 
  const App = () =>{
 
@@ -75,6 +75,7 @@ import BookHotel from './containers/HotelManagement/BookHotel';
             <Route path="/add-package" element={<AddPackage/>} />
             <Route path="/view-hotel" element={<ViewHotel/>} />
             <Route path="/book-hotel" element={<BookHotel/>} />
+            <Route path="/hotels" element={<ViewHotelCategory/>} />
 
 
          </Routes>

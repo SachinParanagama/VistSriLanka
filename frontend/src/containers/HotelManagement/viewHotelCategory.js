@@ -1,20 +1,17 @@
 import React from 'react';
 import {Card, Col} from 'react-bootstrap';
 import {useDispatch} from 'react-redux';
+import axios from 'axios';
+import HomeNavBar from '../../components/common/user/HomeNavBar';
+import {Row,Container} from 'react-bootstrap';
+
 // import { addToCart } from '../redux/actions/cartActions';
 
 
-const viewHotelCategory = ({hotel,userInfo}) => {
+const ViewHotelCategory = ({hotel,userInfo}) => {
     const cat = hotel.category;
 
     const dispatch = useDispatch();
-
-    // const handleAddToCart = () => {
-    //     dispatch(addToCart(hotel,userInfo));
-    //     window.location.reload();
-    // };
- 
-
     return(
         <>
             {cat === "Hotel" &&
@@ -48,4 +45,4 @@ const viewHotelCategory = ({hotel,userInfo}) => {
     )
 }
 
-export default viewHotelCategory;
+export default ViewHotelCategory;

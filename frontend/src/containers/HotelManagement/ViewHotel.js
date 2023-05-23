@@ -139,7 +139,7 @@ export default function ViewHotel(){
             <ViewHotelNavBar/>            
             
             <div id="repGSearch" className='col-lg-3 mt-2 mb-2 ml-5'>
-                <input type="search" className="form-control" placeholder="Search Events..." value={q} onChange={(e)=> setQ(e.target.value)}/>      
+                <input type="search" className="form-control" placeholder="Search Hotels..." value={q} onChange={(e)=> setQ(e.target.value)}/>      
 
             </div>
             
