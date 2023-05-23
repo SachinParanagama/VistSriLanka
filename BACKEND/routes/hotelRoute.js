@@ -8,7 +8,7 @@ let Hotel = require("../models/hotel");
 //image upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "../BACKEND/uploads/hotel");
+    cb(null, "../frontend/public/uploads/");
   },
 
   filename: (req, file, cb) => {

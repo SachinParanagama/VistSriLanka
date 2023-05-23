@@ -6,22 +6,22 @@ import ViewHotelCategory from './HotelCategory';
 
 export default function Hotel() {
 
-    const [events,setEvents] = useState([]);
+    const [hotels,setHotels] = useState([]);
 
    
     useEffect(() =>{
 
-        function getEvents() {
+        function getHotels() {
             axios.get("http://localhost:5000/event/view-event").then((res) => {
 
-                setEvents(res.data);
+                setHotels(res.data);
             }).catch((err) => {
 
                 alert(err.message);
             })
         }
 
-        getEvents();
+        getHotels();
 
     }, [])
 
@@ -31,9 +31,9 @@ export default function Hotel() {
 
            <Container className='justify-content-center p-2'>
            <Row>
-              {events.map((event)=> {
+              {hotels.map((hotel)=> {
                   return(
-                    <ViewHotelCategory event={event} />
+                    <ViewHotelCategory hotel={hotel} />
                   )
               })}
            </Row>

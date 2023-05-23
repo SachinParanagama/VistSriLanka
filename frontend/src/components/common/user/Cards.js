@@ -33,7 +33,7 @@ function Cards() {
                     src="images/home-hotel.gif"
                     text="A world of comfort at your doorstep"
                     label="Hotels"
-                    path="/hotdogs"
+                    path="/hotels"
                 />
             </ul>
         </div>
